@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.scss'
-import ElementUI from 'element-plus';
+import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import './theme/index.css'
 import router from './router'
@@ -22,5 +22,5 @@ ipc.invoke('store:get', 'foo')<Promise>.then((res:string) => {
 const app = createApp(App as any)
 
 app.use(router)
-app.use(ElementUI)
+app.use(ElementPlus)
 app.mount('#app')

@@ -21,6 +21,9 @@ ipc.invoke('store:get', 'foo')<Promise>.then((res:string) => {
 
 const app = createApp(App as any)
 
+//消除dev模式下安全错误警告 （打包出来的时候没有）
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
+
 app.use(router)
 app.use(ElementUI)
 app.mount('#app')
